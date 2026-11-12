@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class S2 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese la potencia en W: ");
+        double potencia = entrada.nextDouble();
+
+        System.out.print("Ingrese las horas de uso diario: ");
+        double horas = entrada.nextDouble();
+
+        System.out.print("Ingrese la tarifa por kWh: ");
+        double tarifa = entrada.nextDouble();
+
+        double consumo = (potencia / 1000) * horas * 30;
+        double costo = consumo * tarifa;
+
+        System.out.println("Consumo mensual: " + consumo + " kWh");
+        System.out.println("Costo total: $" + costo);
+
+        entrada.close();
+    }
+}
